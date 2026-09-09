@@ -1,0 +1,6 @@
+{
+  "name": "闹钟",
+  "description": "简洁实用的多功能闹钟应用，支持自定义时间、重复周期、标签、振动与铃声提醒。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

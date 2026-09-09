@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">闹钟</string>
+    <string name="title_alarms">闹钟列表</string>
+    <string name="add_alarm">添加闹钟</string>
+    <string name="edit_alarm">编辑闹钟</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="alarm_label">标签</string>
+    <string name="alarm_label_hint">闹钟备注（如：早起、会议）</string>
+    <string name="repeat">重复</string>
+    <string name="vibrate">振动提醒</string>
+    <string name="sound">铃声类型</string>
+    <string name="no_alarms_title">暂无闹钟</string>
+    <string name="no_alarms_desc">点击下方按钮添加一个新闹钟吧</string>
+    <string name="next_alarm">下次响铃</string>
+    <string name="no_upcoming_alarm">暂无开启中的闹钟</string>
+    <string name="snooze">稍后提醒</string>
+    <string name="dismiss">关闭闹钟</string>
+    <string name="alarm_ringing">闹钟响铃中</string>
+    <string name="quick_test_alarm">测试响铃</string>
+</resources>
