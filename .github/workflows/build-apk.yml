@@ -26,7 +26,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: 'gradle'
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
@@ -46,20 +45,13 @@ jobs:
             keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
           fi
 
-          # 3. Ensure gradlew exists and is executable
-          if [ ! -f "gradlew" ]; then
-            echo "Generating Gradle wrapper..."
-            gradle wrapper --gradle-version 9.3.1
-          fi
-          chmod +x gradlew
-
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: gradle assembleDebug --stacktrace
 
       - name: Rename APK for Easy Identification
         run: |
           mkdir -p build_output
-          cp app/build/outputs/apk/debug/*.apk build_output/AlarmClock-debug.apk
+          find app/build/outputs/apk/debug -name "*.apk" -exec cp {} build_output/AlarmClock-debug.apk \;
 
       - name: Upload APK as Artifact
         uses: actions/upload-artifact@v4
