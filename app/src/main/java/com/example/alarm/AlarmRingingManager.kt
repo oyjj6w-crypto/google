@@ -111,7 +111,7 @@ class AlarmRingingManager private constructor(private val context: Context) {
         )
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
             .setContentTitle("⏰ 闹钟响铃: ${alarm.label}")
             .setContentText("时间：${alarm.formattedTime} - 点击处理或直接关闭")
             .setPriority(NotificationCompat.PRIORITY_MAX)

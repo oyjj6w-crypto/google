@@ -82,9 +82,9 @@ class AlarmAudioPlayer(private val context: Context) {
                 while (isActive && isPlaying) {
                     when (soundType) {
                         "RADAR" -> {
-                            toneGen?.startTone(ToneGenerator.TONE_CDMA_ALERT_AUTORECEIVE, 200)
+                            toneGen?.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 200)
                             delay(250)
-                            toneGen?.startTone(ToneGenerator.TONE_CDMA_ALERT_AUTORECEIVE, 200)
+                            toneGen?.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 200)
                             delay(600)
                         }
                         "GENTLE" -> {
@@ -147,9 +147,9 @@ class AlarmAudioPlayer(private val context: Context) {
                 val toneGen = ToneGenerator(AudioManager.STREAM_MUSIC, 90)
                 when (soundType) {
                     "RADAR" -> {
-                        toneGen.startTone(ToneGenerator.TONE_CDMA_ALERT_AUTORECEIVE, 250)
+                        toneGen.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 250)
                         delay(300)
-                        toneGen.startTone(ToneGenerator.TONE_CDMA_ALERT_AUTORECEIVE, 250)
+                        toneGen.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 250)
                     }
                     "GENTLE" -> {
                         toneGen.startTone(ToneGenerator.TONE_PROP_BEEP, 350)
